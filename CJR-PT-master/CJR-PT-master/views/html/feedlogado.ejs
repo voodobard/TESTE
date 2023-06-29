@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>PARABENS VC ESTA NO FEED LOGADO</h1>
+    <h2>Seu username: <%= usuariologado.username%></h2>
+    
+    <form action="/logout" method="post">
+    <button>SAIR</button>
+    </form>
+       
+        <% for (let post of posts){ %>
+            <label for="perfil">
+                <div>
+                <p><%= post.User. %></p>
+                <p>post.content</p>
+                 <div>
+            </label>
+            <button style="display: none;"  id="perfil" href="perfil/<%=post.user_id %>"></button> // mudar para nao ser a pagina de perfil do usuario mas para o o post
+         <% } %>
+
+    <form action="/CriarPost" method="post">
+        <textarea name="content" id="" cols="30" rows="10"></textarea>
+        <button>Criar post</button>
+    </form>
+</body>
+</html>
